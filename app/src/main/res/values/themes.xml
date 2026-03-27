@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.PaginaNetflix" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- colorPrimaty = cor principal do aplicativo, a que mais aparece na interface. No início, ela chama atenção, mas depois se torna comum para o usuário.
+        exemplo: Toolbar, botões, Floating action, barra de progresso, caixa de texto etc-->
+        <item name="colorPrimary">@color/primaria</item>
+        <!-- colorPrimaryVariant é uma cor de variação, normalmente mais escura que a primária e tem função de servir como apoio visual e dar contraste.
+        Ela é usada principalmente em áreas que precisam de diferenciação em relação a cor principal, como a barra de status e superfícies elevadas, que representam
+        camadas superiores ou efeitos de profundidade.-->
+        <item name="colorPrimaryVariant">@color/primaria_variacao</item>
+        <!-- colorSecundary é utilizada para destacar elementos importantes ou interativos diferentes da cor primária, ela não aparece com frequência e chama atenção.
+         É a cor que puxa o olhar do usuário, sendo IDEAL para indicar ações ou elementos que precisam ser percebidos rapidamente. Ex: botão cancelar, voltar, pular -->
+        <item name="colorSecondary">@color/secundaria</item>
+        <item name="android:windowBackground">@color/fundo</item>
+        <!--cor da barra de Status -->
+        <!-- -?attr em vez de apontar para uma cor específica, a referência é feita a um atributo de tema. Quando a aplicação é executada, o Android verifica -->
+        <!-- o tema ativo (exemplo: modo claro ou modo escuro.-->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+        <!-- Recomendação de vídeo: Teoria das Cores por Chief of Design. -->
+    </style>
+</resources>
