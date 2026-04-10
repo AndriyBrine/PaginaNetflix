@@ -7,20 +7,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView2"-->
-<!--        android:layout_width="411dp"-->
-<!--        android:layout_height="440dp"-->
-<!--        android:scaleType="centerCrop"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.0"-->
-<!--        app:srcCompat="@drawable/capa" />-->
-<!-- Ctrl + / = por e tirar tudo em comentario -->
+    <!-- Ctrl + / = por e tirar tudo em comentario-->
 
+
+    <ImageView
+        android:id="@+id/imgCapa"
+        android:layout_width="match_parent"
+        android:layout_height="345dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/capa" />
 
     <TextView
         android:id="@+id/txtMinhaLista"
@@ -40,6 +38,7 @@
         android:id="@+id/imgLogo"
         android:layout_width="43dp"
         android:layout_height="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal2"
         app:layout_constraintEnd_toStartOf="@+id/txtSerie"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,16 +70,17 @@
         app:layout_constraintEnd_toStartOf="@+id/txtMinhaLista"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/txtSerie"
-        app:layout_constraintTop_toTopOf="@+id/imgLogo"
-        app:layout_constraintVertical_bias="0.512" />
+        app:layout_constraintTop_toTopOf="@+id/imgLogo" />
 
     <ImageView
         android:id="@+id/imgnomefilme"
         android:layout_width="150dp"
         android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal3"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
         app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal2"
-        app:srcCompat="@drawable/logonome"
-        tools:layout_editor_absoluteX="132dp" />
+        app:srcCompat="@drawable/logonome" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineHorizontal1"
@@ -97,5 +97,147 @@
         app:layout_constraintGuide_percent="0.10" />
     <!-- 0.10 é 10% e 0.03 é 3%-->
 
+    <TextView
+        android:id="@+id/txtAnime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anime"
+        android:textColor="@color/branco"
+        app:layout_constraintBottom_toBottomOf="@+id/txtAdaptacao"
+        app:layout_constraintEnd_toStartOf="@+id/txtAdaptacao"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+        app:layout_constraintTop_toTopOf="@+id/txtAdaptacao" />
+
+    <TextView
+        android:id="@+id/txtAdaptacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:padding="2dp"
+        android:text="Adaptação"
+        android:textColor="@color/branco"
+        app:layout_constraintEnd_toStartOf="@+id/txtAcao"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtAnime"
+        app:layout_constraintTop_toBottomOf="@+id/imgnomefilme" />
+
+    <TextView
+        android:id="@+id/txtAcao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ação"
+        android:textColor="@color/branco"
+        app:layout_constraintBottom_toBottomOf="@+id/txtAdaptacao"
+        app:layout_constraintEnd_toEndOf="@id/guidelineDireita"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtAdaptacao"
+        app:layout_constraintTop_toTopOf="@+id/txtAdaptacao" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@id/guidelineHorizontal3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.47" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEsquerda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineDireita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <Button
+        android:id="@+id/btnMinhaLista"
+        android:layout_width="116dp"
+        android:layout_height="63dp"
+        android:backgroundTint="@android:color/transparent"
+        android:drawableTop="@drawable/icplus"
+        android:text="MINHA LISTA"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAssistir"
+        app:layout_constraintEnd_toStartOf="@+id/btnAssistir"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+        app:layout_constraintTop_toTopOf="@+id/btnAssistir" />
+
+    <Button
+        android:id="@+id/btnAssistir"
+        android:layout_width="116dp"
+        android:layout_height="48dp"
+        android:drawableLeft="@drawable/icassistir"
+        android:text="Assistir"
+        android:textSize="10sp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnDetalhes"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnMinhaLista"
+        app:layout_constraintTop_toBottomOf="@+id/txtAdaptacao" />
+
+    <Button
+        android:id="@+id/btnDetalhes"
+        android:layout_width="114dp"
+        android:layout_height="62dp"
+        android:backgroundTint="@android:color/transparent"
+        android:drawableTop="@drawable/icinfo"
+        android:text="DETALHES"
+        android:textSize="10sp"
+        app:iconSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAssistir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnAssistir"
+        app:layout_constraintTop_toTopOf="@+id/btnAssistir" />
+
+    <TextView
+        android:id="@+id/txtLancamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Lançamento"
+        android:textColor="@color/branco"
+        app:layout_constraintStart_toStartOf="@+id/imgfilme1"
+        app:layout_constraintTop_toBottomOf="@id/btnAssistir" />
+
+    <ImageView
+        android:id="@+id/imgfilme1"
+        android:layout_width="85dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgfilme2"
+        app:layout_constraintEnd_toStartOf="@+id/imgfilme2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+        app:layout_constraintTop_toTopOf="@+id/imgfilme2"
+        app:srcCompat="@drawable/f1" />
+
+    <ImageView
+        android:id="@+id/imgfilme2"
+        android:layout_width="85dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/imgfilme3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgfilme1"
+        app:layout_constraintTop_toBottomOf="@+id/txtLancamento"
+        app:srcCompat="@drawable/f2" />
+
+    <ImageView
+        android:id="@+id/imgfilme3"
+        android:layout_width="85dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgfilme2"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgfilme2"
+        app:layout_constraintTop_toTopOf="@+id/imgfilme2"
+        app:srcCompat="@drawable/f3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
