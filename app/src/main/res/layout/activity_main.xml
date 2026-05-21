@@ -240,4 +240,13 @@
         app:layout_constraintTop_toTopOf="@+id/imgfilme2"
         app:srcCompat="@drawable/f3" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aluno: Andriy"
+        android:textColor="@color/branco"
+        tools:layout_editor_absoluteX="178dp"
+        tools:layout_editor_absoluteY="482dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
