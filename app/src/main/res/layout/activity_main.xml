@@ -246,7 +246,9 @@
         android:layout_height="wrap_content"
         android:text="Aluno: Andriy"
         android:textColor="@color/branco"
-        tools:layout_editor_absoluteX="178dp"
-        tools:layout_editor_absoluteY="482dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+        app:layout_constraintTop_toBottomOf="@+id/imgfilme2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
